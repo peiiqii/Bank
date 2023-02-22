@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600" prefWidth="1000" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainviewController">
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" contentDisplay="TOP" prefHeight="43.0" prefWidth="153.0" text="Accountlist:" />
+      </children>
+   </HBox>
+
+    <ListView fx:id="AccountListe" prefHeight="555.0" prefWidth="976.0">
+        <contextMenu>
+            <ContextMenu fx:id="cmList">
+                <items>
+                    <MenuItem onAction="#auswaehlen" text="Auswählen" />
+                    <MenuItem onAction="#loeschen" text="Löschen" />
+                </items>
+            </ContextMenu>
+        </contextMenu>
+      <padding>
+         <Insets left="12.0" right="12.0" />
+      </padding>
+      <VBox.margin>
+         <Insets left="12.0" right="12.0" />
+      </VBox.margin>
+    </ListView>
+    <Button onAction="#newAccount" prefHeight="25.0" prefWidth="112.0" text="new account" />
+</VBox>
